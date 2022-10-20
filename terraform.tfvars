@@ -9,6 +9,9 @@ common_tags = {
 project = "ToTheNew"
 environment = "dev"
 subnet_ids = [""]
-security_group_ids = [""]
 vpc_id = ""
 route_table_ids = [""]
+from_port = 443
+to_port = 443
+protocol = "tcp"
+
