@@ -1,50 +1,3 @@
-# terraform-aws-vpc-endpoint
-
-# main.tf
-
-```
-module "vpc_endpoint_main" { 
-	source               		 = "git::https://github.com/tothenew/terraform-aws-vpc-endpoint.git"
-	protocol			 = var.protocol
-	to_port				 = var.to_port
-	from_port			 = var.from_port
-	vpc_id 				 = var.vpc_id
-	sg_description		 	 = var.sg_description
-	region				 = var.region
-	subnet_ids			 = var.subnet_ids
-	common_tags			 = var.common_tags
-	route_table_ids		 	 = var.route_table_ids
-	project_name_prefix	 	 = var.project_name_prefix
-	profile				 = var.profile
-}
-```
-
-
-# terraform.tfvars
-
-```
-region               = "ap-south-1"
-profile              = ""
-project_name_prefix  = "tothenew"
-
-common_tags 	     = {
-    	   "Feature" : "application"
-}
-
-project              = "ToTheNew"
-environment 	     = "dev"
-subnet_ids 	     = [""]
-vpc_id 		     = ""
-route_table_ids      = [""]
-from_port 	     = 443
-to_port 	     = 443
-protocol 	     = "tcp"
-sg_description	     = "Security group created for VPC endpoint"
-```
-
-# output.tf
-
-```
 output "vpc_endpoint_sg_id" {
   value = module.security_group.vpc_endpoint_sg_id
 }
@@ -167,4 +120,3 @@ output "dynamodb_gateway_id" {
 output "dynamodb_gateway_arn" {
 	value = module.dynamodb_gateway.vpc_endpoint_arn
 }
-```
