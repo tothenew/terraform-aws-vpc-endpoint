@@ -1,12 +1,12 @@
 module "security_group" {
-    source         = "modules/security-group"
+    source         = "./modules/security-group"
     sg_name        = "${local.project_name_prefix}-sg"
     vpc_id         = var.vpc_id
     tags           = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-sg" }))
 }
 
 module "ssm_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.ssm"
     subnet_ids         = var.subnet_ids
@@ -15,7 +15,7 @@ module "ssm_interface" {
 }
 
 module "ssm_messages_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.ssmmessages"
     subnet_ids         = var.subnet_ids
@@ -24,7 +24,7 @@ module "ssm_messages_interface" {
 }
 
 module "ec2_messages_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.ec2messages"
     subnet_ids         = var.subnet_ids
@@ -33,7 +33,7 @@ module "ec2_messages_interface" {
 }
 
 module "s3_gateway" {
-    source          = "modules/vpc-endpoint/gateway"
+    source          = "./modules/vpc-endpoint/gateway"
     service_name    = "com.amazonaws.${var.region}.s3"
     route_table_ids = var.route_table_ids
     vpc_id          = var.vpc_id
@@ -41,7 +41,7 @@ module "s3_gateway" {
 }
 
 module "cloudwatch_logs_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.logs"
     subnet_ids         = var.subnet_ids
@@ -50,7 +50,7 @@ module "cloudwatch_logs_interface" {
 }
 
 module "cloudwatch_monitoring_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.monitoring"
     subnet_ids         = var.subnet_ids
@@ -61,7 +61,7 @@ module "cloudwatch_monitoring_interface" {
 }
 
 module "ec2_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.ec2"
     subnet_ids         = var.subnet_ids
@@ -70,7 +70,7 @@ module "ec2_interface" {
 }
 
 module "ecr_api_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.ecr.api"
     subnet_ids         = var.subnet_ids
@@ -79,7 +79,7 @@ module "ecr_api_interface" {
 }
 
 module "ecr_dkr_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.ecr.dkr"
     subnet_ids         = var.subnet_ids
@@ -88,7 +88,7 @@ module "ecr_dkr_interface" {
 }
 
 module "autoscaling_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.autoscaling"
     subnet_ids         = var.subnet_ids
@@ -97,7 +97,7 @@ module "autoscaling_interface" {
 }
 
 module "elb_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.elasticloadbalancing"
     subnet_ids         = var.subnet_ids
@@ -106,7 +106,7 @@ module "elb_interface" {
 }
 
 module "sns_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.sns"
     subnet_ids         = var.subnet_ids
@@ -115,7 +115,7 @@ module "sns_interface" {
 }
 
 module "sqs_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.sqs"
     subnet_ids         = var.subnet_ids
@@ -124,7 +124,7 @@ module "sqs_interface" {
 }
 
 module "secrets_manager_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.secretsmanager"
     subnet_ids         = var.subnet_ids
@@ -133,7 +133,7 @@ module "secrets_manager_interface" {
 }
 
 module "lambda_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.lambda"
     subnet_ids         = var.subnet_ids
@@ -142,7 +142,7 @@ module "lambda_interface" {
 }
 
 module "cloudwatch_monitoring_interface" {
-    source             = "modules/vpc-endpoint/interface"
+    source             = "./modules/vpc-endpoint/interface"
     security_group_ids = module.security_group.vpc_endpoint_sg_id
     service_name       = "com.amazonaws.${var.region}.monitoring"
     subnet_ids         = var.subnet_ids
@@ -153,7 +153,7 @@ module "cloudwatch_monitoring_interface" {
 }
 
 module "dynamodb_gateway" {
-    source          = "modules/vpc-endpoint/gateway"
+    source          = "./modules/vpc-endpoint/gateway"
     service_name    = "com.amazonaws.${var.region}.dynamodb"
     route_table_ids = var.route_table_ids
     vpc_id          = var.vpc_id
