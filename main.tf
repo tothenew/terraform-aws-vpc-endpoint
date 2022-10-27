@@ -41,7 +41,6 @@ module "s3_gateway" {
     service_name        = "com.amazonaws.${var.region}.s3"
     route_table_ids     = var.route_table_ids
     vpc_id              = var.vpc_id
-    private_dns_enabled = var.private_dns_enabled
     tags                = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-s3" }))
 }
 
@@ -162,6 +161,5 @@ module "dynamodb_gateway" {
     service_name        = "com.amazonaws.${var.region}.dynamodb"
     route_table_ids     = var.route_table_ids
     vpc_id              = var.vpc_id
-    private_dns_enabled = var.private_dns_enabled
     tags                = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-dynamodb" }))
 }
