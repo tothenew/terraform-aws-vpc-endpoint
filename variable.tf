@@ -49,3 +49,7 @@ variable "common_tags" {
 variable "private_dns_enabled" {
     type = bool
 }
+
+variable "security_group_id" {
+    type = string
+}
