@@ -1,7 +1,3 @@
-output "vpc_endpoint_sg_id" {
-    value = module.security_group.vpc_endpoint_sg_id
-}
-
 output "ssm_interface_id" {
     value = module.ssm_interface.vpc_endpoint_id
 }
