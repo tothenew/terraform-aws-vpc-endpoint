@@ -1,9 +1,9 @@
 module "security_group" {
-    source  = "./modules/security-group"
-    sg_name = "${local.project_name_prefix}-sg"
-    vpc_id  = var.vpc_id
+    source      = "./modules/security-group"
+    sg_name     = "${local.project_name_prefix}-sg"
+    vpc_id      = var.vpc_id
     cidr_blocks = [var.cidr_block]
-    tags    = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-sg" }))
+    tags        = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-sg" }))
 }
 
 module "ssm_interface" {

@@ -1,9 +1,9 @@
 variable "vpc_id" {
-    type = string
+    type        = string
     description = "A string value for VPC ID"
 }
 variable "cidr_blocks" {
-    type = string
+    type        = list(string)
     description = "A string value for VPC CIDR"
 }
 variable "sg_description" {
