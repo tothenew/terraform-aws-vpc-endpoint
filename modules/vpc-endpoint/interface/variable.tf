@@ -14,5 +14,6 @@ variable "tags" {
 }
 variable "private_dns_enabled" {
 	type 	    = bool
+	default 	= true
 	description = "A boolean flag to enable/disable private DNS for VPC Epoint Interface"
 }

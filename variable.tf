@@ -40,6 +40,12 @@ variable "route_table_ids" {
     description = "A list of string value for Route table IDs"
 }
 
+variable "subnet_ids" {
+    type        = list(string)
+    default     = [""]
+    description = "A list of string value for Subnet IDs"
+}
+
 variable "sg_description" {
     type        = string
     default     = "This security group belongs to VPC Endpoint"
@@ -64,6 +70,9 @@ variable "protocol" {
     description = "A list of string value for Route table IDs"
 }
 
-
+variable "common_tags" {
+    type        = map(string)
+    description = "A map to add common tags to all the resources"
+}
 
 
