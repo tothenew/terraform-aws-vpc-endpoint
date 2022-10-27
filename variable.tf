@@ -41,4 +41,6 @@ variable "common_tags" {
     description = "A map to add common tags to all the resources"
 }
 
-
+variable "private_dns_enabled" {
+    type = bool
+}
