@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb82781d-37b1-4167-9b2e-e9fc942afacf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/terraform.tfvars" beforeDir="false" afterPath="$PROJECT_DIR$/terraform.tfvars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variable.tf" beforeDir="false" afterPath="$PROJECT_DIR$/variable.tf" afterDir="false" />
-    </list>
+    <list default="true" id="fb82781d-37b1-4167-9b2e-e9fc942afacf" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
