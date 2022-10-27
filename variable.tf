@@ -26,6 +26,11 @@ variable "vpc_id" {
     description = "A string value for VPC ID"
 }
 
+variable "cidr_block" {
+    type        = string
+    description = "IPV4 range for VPC Creation"
+}
+
 variable "route_table_ids" {
     type        = list(string)
     description = "A list of string value for Route table IDs"

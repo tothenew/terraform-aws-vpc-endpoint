@@ -12,3 +12,4 @@ subnet_ids      = [""]
 vpc_id          = ""
 route_table_ids = [""]
 private_dns_enabled = true
+cidr_block = ""

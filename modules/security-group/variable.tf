@@ -2,6 +2,10 @@ variable "vpc_id" {
     type = string
     description = "A string value for VPC ID"
 }
+variable "cidr_blocks" {
+    type = string
+    description = "A string value for VPC CIDR"
+}
 variable "sg_description" {
     type        = string
     description = "A string to add description to the security group"
