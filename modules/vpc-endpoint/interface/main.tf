@@ -7,5 +7,3 @@ resource "aws_vpc_endpoint" "vpc_endpoint" {
 	private_dns_enabled = var.private_dns_enabled			
 	tags                = var.tags
 }
-
-
