@@ -155,3 +155,13 @@ module "dynamodb_gateway" {
     vpc_id              = var.vpc_id
     tags                = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-dynamodb" }))
 }
+
+module "sts_interface" {
+    source              = "./modules/vpc-endpoint/interface"
+    security_group_ids  = [var.security_group_id]
+    service_name        = "com.amazonaws.${var.region}.sts"
+    subnet_ids          = var.subnet_ids
+    vpc_id              = var.vpc_id
+    private_dns_enabled = var.private_dns_enabled
+    tags                = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-sts" }))
+}
