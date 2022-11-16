@@ -1,170 +1,49 @@
 # terraform-aws-vpc-endpoint
 
-# main.tf
+[![Lint Status](https://github.com/tothenew/terraform-aws-vpc-endpoint/workflows/Lint/badge.svg)](https://github.com/tothenew/terraform-aws-vpc-endpoint/actions)
+[![LICENSE](https://img.shields.io/github/license/tothenew/terraform-aws-vpc-endpoint)](https://github.com/tothenew/terraform-aws-vpc-endpoint/blob/master/LICENSE)
 
-```
-module "vpc_endpoint_main" { 
-	source               		 = "git::https://github.com/tothenew/terraform-aws-vpc-endpoint.git"
-	protocol			 = var.protocol
-	to_port				 = var.to_port
-	from_port			 = var.from_port
-	vpc_id 				 = var.vpc_id
-	sg_description		 	 = var.sg_description
-	region				 = var.region
-	subnet_ids			 = var.subnet_ids
-	common_tags			 = var.common_tags
-	route_table_ids		 	 = var.route_table_ids
-	project_name_prefix	 	 = var.project_name_prefix
-	profile				 = var.profile
-}
-```
+This is a vpc-endpoint to use for baseline. The default actions will provide updates for section bitween Requirements and Outputs.
 
+The following content needed to be created and managed:
+ - Introduction
+     - Explaination of module 
+     - Intended users
+ - Resource created and managed by this module
+ - Example Usages
 
-# terraform.tfvars
+<!-- BEGIN_TF_DOCS -->
+## Requirements
 
-```
-region               = "ap-south-1"
-profile              = ""
-project_name_prefix  = "tothenew"
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.3.0 |
 
-common_tags 	     = {
-    	   "Feature" : "application"
-}
+## Providers
 
-project              = "ToTheNew"
-environment 	     = "dev"
-subnet_ids 	     = [""]
-vpc_id 		     = ""
-route_table_ids      = [""]
-from_port 	     = 443
-to_port 	     = 443
-protocol 	     = "tcp"
-sg_description	     = "Security group created for VPC endpoint"
-```
+No providers.
 
-# output.tf
+## Modules
 
-```
-output "vpc_endpoint_sg_id" {
-  value = module.security_group.vpc_endpoint_sg_id
-}
+No modules.
 
-output "ssm_interface_id" {
-	value = module.ssm_interface.vpc_endpoint_id
-}
-output "ssm_interface_arn" {
-	value = module.ssm_interface.vpc_endpoint_arn
-}
+## Resources
 
-output "ssm_messages_interface_id" {
-	value = module.ssm_messages_interface.vpc_endpoint_id
-}
-output "ssm_messages_interface_arn" {
-	value = module.ssm_messages_interface.vpc_endpoint_arn
-}
+No resources.
 
-output "ec2_messages_interface_id" {
-	value = module.ec2_messages_interface.vpc_endpoint_id
-}
-output "ec2_messages_interface_arn" {
-	value = module.ec2_messages_interface.vpc_endpoint_arn
-}
+## Inputs
 
-output "s3_gateway_id" {
-	value = module.s3_gateway.vpc_endpoint_id
-}
-output "s3_gateway_arn" {
-	value = module.s3_gateway.vpc_endpoint_arn
-}
+No inputs.
 
-output "cloudwatch_logs_interface_id" {
-	value = module.cloudwatch_logs_interface.vpc_endpoint_id
-}
-output "cloudwatch_logs_interface_arn" {
-	value = module.cloudwatch_logs_interface.vpc_endpoint_arn
-}
+## Outputs
 
-output "cloudwatch_monitoring_interface_id" {
-	value = module.cloudwatch_monitoring_interface.vpc_endpoint_id
-}
-output "cloudwatch_monitoring_interface_arn" {
-	value = module.cloudwatch_monitoring_interface.vpc_endpoint_arn
-}
+No outputs.
+<!-- END_TF_DOCS -->
 
-output "ec2_interface_id" {
-	value = module.ec2_interface.vpc_endpoint_id
-}
-output "ec2_interface_arn" {
-	value = module.ec2_interface.vpc_endpoint_arn
-}
+## Authors
 
-output "ecr_api_interface_id" {
-	value = module.ecr_api_interface.vpc_endpoint_id
-}
-output "ecr_api_interface_arn" {
-	value = module.ecr_api_interface.vpc_endpoint_arn
-}
+Module managed by [TO THE NEW Pvt. Ltd.](https://github.com/tothenew)
 
-output "ecr_dkr_interface_id" {
-	value = module.ecr_dkr_interface.vpc_endpoint_id
-}
-output "ecr_dkr_interface_arn" {
-	value = module.ecr_dkr_interface.vpc_endpoint_arn
-}
+## License
 
-output "autoscaling_interface_id" {
-	value = module.autoscaling_interface.vpc_endpoint_id
-}
-output "autoscaling_interface_arn" {
-	value = module.autoscaling_interface.vpc_endpoint_arn
-}
-
-output "elb_interface_id" {
-	value = module.elb_interface.vpc_endpoint_id
-}
-output "elb_interface_arn" {
-	value = module.elb_interface.vpc_endpoint_arn
-}
-
-output "sns_interface_id" {
-	value = module.sns_interface.vpc_endpoint_id
-}
-output "sns_interface_arn" {
-	value = module.sns_interface.vpc_endpoint_arn
-}
-
-output "sqs_interface_id" {
-	value = module.sqs_interface.vpc_endpoint_id
-}
-output "sqs_interface_arn" {
-	value = module.sqs_interface.vpc_endpoint_arn
-}
-
-output "secrets_manager_interface_id" {
-	value = module.secrets_manager_interface.vpc_endpoint_id
-}
-output "secrets_manager_interface_arn" {
-	value = module.secrets_manager_interface.vpc_endpoint_arn
-}
-
-output "lambda_interface_id" {
-	value = module.lambda_interface.vpc_endpoint_id
-}
-output "lambda_interface_arn" {
-	value = module.lambda_interface.vpc_endpoint_arn
-}
-
-output "cloudwatch_monitoring_interface_id" {
-	value = module.cloudwatch_monitoring_interface.vpc_endpoint_id
-}
-output "cloudwatch_monitoring_interface_arn" {
-	value = module.cloudwatch_monitoring_interface.vpc_endpoint_arn
-}
-
-output "dynamodb_gateway_id" {
-	value = module.dynamodb_gateway.vpc_endpoint_id
-}
-output "dynamodb_gateway_arn" {
-	value = module.dynamodb_gateway.vpc_endpoint_arn
-}
-```
+Apache 2 Licensed. See [LICENSE](https://github.com/tothenew/terraform-aws-vpc-endpoint/blob/main/LICENSE) for full details.
