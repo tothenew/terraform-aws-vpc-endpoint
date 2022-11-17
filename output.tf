@@ -109,3 +109,10 @@ output "dynamodb_gateway_id" {
 output "dynamodb_gateway_arn" {
   value = module.dynamodb_gateway.vpc_endpoint_arn
 }
+
+output "sts_interface_id" {
+    value = module.sts_interface.vpc_endpoint_id
+}
+output "sts_interface_arn" {
+    value = module.sts_interface.vpc_endpoint_arn
+}
