@@ -46,6 +46,7 @@ No providers.
 | <a name="module_sqs_interface"></a> [sqs\_interface](#module\_sqs\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_ssm_interface"></a> [ssm\_interface](#module\_ssm\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_ssm_messages_interface"></a> [ssm\_messages\_interface](#module\_ssm\_messages\_interface) | ./modules/vpc-endpoint/interface | n/a |
+| <a name="module_sts_interface"></a> [sts\_interface](#module\_sts\_interface) | ./modules/vpc-endpoint/interface | n/a |
 
 ## Resources
 
@@ -55,12 +56,8 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | IPV4 range for VPC Creation | `string` | n/a | yes |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A map to add common tags to all the resources | `map(string)` | n/a | yes |
-| <a name="input_environment"></a> [environment](#input\_environment) | n/a | `string` | n/a | yes |
 | <a name="input_private_dns_enabled"></a> [private\_dns\_enabled](#input\_private\_dns\_enabled) | n/a | `bool` | n/a | yes |
-| <a name="input_profile"></a> [profile](#input\_profile) | A string value for tag as Project Name | `string` | n/a | yes |
-| <a name="input_project"></a> [project](#input\_project) | A string value for tag as Project Name | `string` | n/a | yes |
 | <a name="input_project_name_prefix"></a> [project\_name\_prefix](#input\_project\_name\_prefix) | A string value to describe prefix of all the resources | `string` | n/a | yes |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | n/a | yes |
 | <a name="input_route_table_ids"></a> [route\_table\_ids](#input\_route\_table\_ids) | A list of string value for Route table IDs | `list(string)` | n/a | yes |
@@ -104,6 +101,8 @@ No resources.
 | <a name="output_ssm_interface_id"></a> [ssm\_interface\_id](#output\_ssm\_interface\_id) | n/a |
 | <a name="output_ssm_messages_interface_arn"></a> [ssm\_messages\_interface\_arn](#output\_ssm\_messages\_interface\_arn) | n/a |
 | <a name="output_ssm_messages_interface_id"></a> [ssm\_messages\_interface\_id](#output\_ssm\_messages\_interface\_id) | n/a |
+| <a name="output_sts_interface_arn"></a> [sts\_interface\_arn](#output\_sts\_interface\_arn) | n/a |
+| <a name="output_sts_interface_id"></a> [sts\_interface\_id](#output\_sts\_interface\_id) | n/a |
 <!-- END_TF_DOCS -->
 
 ## Authors
