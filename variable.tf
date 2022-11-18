@@ -7,28 +7,9 @@ variable "region" {
   type = string
 }
 
-variable "environment" {
-  type = string
-}
-
-variable "project" {
-  type        = string
-  description = "A string value for tag as Project Name"
-}
-
-variable "profile" {
-  type        = string
-  description = "A string value for tag as Project Name"
-}
-
 variable "vpc_id" {
   type        = string
   description = "A string value for VPC ID"
-}
-
-variable "cidr_block" {
-  type        = string
-  description = "IPV4 range for VPC Creation"
 }
 
 variable "route_table_ids" {

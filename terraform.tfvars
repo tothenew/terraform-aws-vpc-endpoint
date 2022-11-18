@@ -1,16 +1,14 @@
 region              = "ap-south-1"
-profile             = "tothenew"
-project_name_prefix = "tothenew"
+project_name_prefix = "dev-tothenew"
 
 common_tags = {
   "Feature" : "application"
+  "Project": "ToTheNew"
+  "Environment": "dev"
 }
 
-project             = "ToTheNew"
-environment         = "dev"
 subnet_ids          = [""]
 vpc_id              = ""
 route_table_ids     = [""]
 private_dns_enabled = true
-cidr_block          = ""
 security_group_id   = ""
