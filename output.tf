@@ -111,8 +111,8 @@ output "dynamodb_gateway_arn" {
 }
 
 output "sts_interface_id" {
-    value = module.sts_interface.vpc_endpoint_id
+  value = module.sts_interface.vpc_endpoint_id
 }
 output "sts_interface_arn" {
-    value = module.sts_interface.vpc_endpoint_arn
+  value = module.sts_interface.vpc_endpoint_arn
 }

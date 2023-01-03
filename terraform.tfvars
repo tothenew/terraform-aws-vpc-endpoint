@@ -3,8 +3,8 @@ project_name_prefix = "dev-tothenew"
 
 common_tags = {
   "Feature" : "application"
-  "Project": "ToTheNew"
-  "Environment": "dev"
+  "Project" : "ToTheNew"
+  "Environment" : "dev"
 }
 
 subnet_ids          = [""]
