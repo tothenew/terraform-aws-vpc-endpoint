@@ -1,7 +1,7 @@
 module "ssm_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.ssm"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.ssm"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -10,8 +10,8 @@ module "ssm_interface" {
 
 module "ssm_messages_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.ssmmessages"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.ssmmessages"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -20,8 +20,8 @@ module "ssm_messages_interface" {
 
 module "ec2_messages_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.ec2messages"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.ec2messages"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -30,7 +30,7 @@ module "ec2_messages_interface" {
 
 module "s3_gateway" {
   source          = "./modules/vpc-endpoint/gateway"
-  service_name    = "com.amazonaws.${var.region}.s3"
+  service_name    = "com.amazonaws.${local.region_name}.s3"
   route_table_ids = var.route_table_ids
   vpc_id          = var.vpc_id
   tags            = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-s3" }))
@@ -38,8 +38,8 @@ module "s3_gateway" {
 
 module "cloudwatch_logs_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.logs"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.logs"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -48,8 +48,8 @@ module "cloudwatch_logs_interface" {
 
 module "cloudwatch_monitoring_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.monitoring"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.monitoring"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -60,8 +60,8 @@ module "cloudwatch_monitoring_interface" {
 
 module "ec2_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.ec2"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.ec2"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -70,8 +70,8 @@ module "ec2_interface" {
 
 module "ecr_api_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.ecr.api"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.ecr.api"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -80,8 +80,8 @@ module "ecr_api_interface" {
 
 module "ecr_dkr_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.ecr.dkr"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.ecr.dkr"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -90,8 +90,8 @@ module "ecr_dkr_interface" {
 
 module "autoscaling_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.autoscaling"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.autoscaling"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -100,8 +100,8 @@ module "autoscaling_interface" {
 
 module "elb_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.elasticloadbalancing"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.elasticloadbalancing"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -110,8 +110,8 @@ module "elb_interface" {
 
 module "sns_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.sns"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.sns"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -120,8 +120,8 @@ module "sns_interface" {
 
 module "sqs_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.sqs"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.sqs"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -130,8 +130,8 @@ module "sqs_interface" {
 
 module "secrets_manager_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.secretsmanager"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.secretsmanager"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -140,8 +140,8 @@ module "secrets_manager_interface" {
 
 module "lambda_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.lambda"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.lambda"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
@@ -150,7 +150,7 @@ module "lambda_interface" {
 
 module "dynamodb_gateway" {
   source          = "./modules/vpc-endpoint/gateway"
-  service_name    = "com.amazonaws.${var.region}.dynamodb"
+  service_name    = "com.amazonaws.${local.region_name}.dynamodb"
   route_table_ids = var.route_table_ids
   vpc_id          = var.vpc_id
   tags            = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-dynamodb" }))
@@ -158,8 +158,8 @@ module "dynamodb_gateway" {
 
 module "sts_interface" {
   source              = "./modules/vpc-endpoint/interface"
-  security_group_ids  = [var.security_group_id]
-  service_name        = "com.amazonaws.${var.region}.sts"
+  security_group_ids  = [local.security_group_id]
+  service_name        = "com.amazonaws.${local.region_name}.sts"
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled

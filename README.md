@@ -5,21 +5,15 @@
 
 This is a vpc-endpoint to use for baseline. The default actions will provide updates for section between Requirements and Outputs.
 
+- Will create all the required VPC endpoint which is used regularly in like DynamoDB, SSM, ECR, SQS, SNS, Lambda
+
 # Usages
 ```
 module "vpc_endpoint" {
   source              = "git::https://github.com/tothenew/terraform-aws-vpc-endpoint.git"
-  region              = "ap-south-1"
-  common_tags         = {
-    "Project"     = "ToTheNew",
-    "Environment" = "dev"
-  }
-  project_name_prefix = "dev-tothenew"
   vpc_id              = "vpc-999999999999"
   subnet_ids          = ["subnet-999999999999"]
   route_table_ids     = ["rt-999999999999"]
-  private_dns_enabled = true
-  security_group_id   = "sg-999999999999"
 }
 ```
 

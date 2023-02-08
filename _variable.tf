@@ -1,10 +1,17 @@
 variable "project_name_prefix" {
   type        = string
   description = "A string value to describe prefix of all the resources"
+  default     = "dev-project"
 }
 
-variable "region" {
-  type = string
+variable "common_tags" {
+  type        = map(string)
+  description = "A map to add common tags to all the resources"
+  default = {
+    "Environment" : "dev"
+    "Project" : "project"
+    "Feature" : "application"
+  }
 }
 
 variable "vpc_id" {
@@ -22,15 +29,14 @@ variable "subnet_ids" {
   description = "A list of string value for Subnet IDs"
 }
 
-variable "common_tags" {
-  type        = map(string)
-  description = "A map to add common tags to all the resources"
-}
-
 variable "private_dns_enabled" {
-  type = bool
+  type        = bool
+  description = "Allow private DNS enabled for the New VPC endpoint"
+  default     = true
 }
 
 variable "security_group_id" {
-  type = string
+  type        = string
+  description = "Security Group ID for VPC Endpoint, if not define module will create automatically"
+  default     = ""
 }
