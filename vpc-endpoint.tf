@@ -174,14 +174,14 @@ module "add_interface" {
   subnet_ids          = var.subnet_ids
   vpc_id              = var.vpc_id
   private_dns_enabled = var.private_dns_enabled
-  tags                = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-sts" }))
+  tags                = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-${replace(count.index, "." ,"-")}" }))
 }
 
 module "add_gateway" {
-  count               = var.add_gateway ? length(var.add_gateway) : 0
+  count           = var.add_gateway ? length(var.add_gateway) : 0
   source          = "./modules/vpc-endpoint/gateway"
   service_name    = "com.amazonaws.${local.region_name}.${count.index}"
   route_table_ids = var.route_table_ids
   vpc_id          = var.vpc_id
-  tags            = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-dynamodb" }))
+  tags            = merge(local.common_tags, tomap({ "Name" : "${local.project_name_prefix}-${replace(count.index, "." ,"-")}" }))
 }
