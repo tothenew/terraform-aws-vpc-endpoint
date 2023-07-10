@@ -40,3 +40,15 @@ variable "security_group_id" {
   description = "Security Group ID for VPC Endpoint, if not define module will create automatically"
   default     = ""
 }
+
+variable "add_interface" {
+  type        = list(string)
+  description = "Adding new Interface endpoints"
+  default     = []
+}
+
+variable "add_gateway" {
+  type        = list(string)
+  description = "Adding new Gateway endpoints"
+  default     = []
+}
