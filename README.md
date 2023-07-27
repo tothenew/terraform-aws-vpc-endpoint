@@ -34,6 +34,8 @@ module "vpc_endpoint" {
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_add_gateway"></a> [add\_gateway](#module\_add\_gateway) | ./modules/vpc-endpoint/gateway | n/a |
+| <a name="module_add_interface"></a> [add\_interface](#module\_add\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_autoscaling_interface"></a> [autoscaling\_interface](#module\_autoscaling\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_cloudwatch_logs_interface"></a> [cloudwatch\_logs\_interface](#module\_cloudwatch\_logs\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_cloudwatch_monitoring_interface"></a> [cloudwatch\_monitoring\_interface](#module\_cloudwatch\_monitoring\_interface) | ./modules/vpc-endpoint/interface | n/a |
@@ -65,6 +67,8 @@ module "vpc_endpoint" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_add_gateway"></a> [add\_gateway](#input\_add\_gateway) | Adding new Gateway endpoints | `list(string)` | `[]` | no |
+| <a name="input_add_interface"></a> [add\_interface](#input\_add\_interface) | Adding new Interface endpoints | `list(string)` | `[]` | no |
 | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | A map to add common tags to all the resources | `map(string)` | <pre>{<br>  "Environment": "dev",<br>  "Feature": "application",<br>  "Project": "project"<br>}</pre> | no |
 | <a name="input_private_dns_enabled"></a> [private\_dns\_enabled](#input\_private\_dns\_enabled) | Allow private DNS enabled for the New VPC endpoint | `bool` | `true` | no |
 | <a name="input_project_name_prefix"></a> [project\_name\_prefix](#input\_project\_name\_prefix) | A string value to describe prefix of all the resources | `string` | `"dev-project"` | no |
