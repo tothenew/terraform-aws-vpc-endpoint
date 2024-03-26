@@ -41,12 +41,14 @@ variable "security_group_id" {
   default     = ""
 }
 
+# "logs", "monitoring", "autoscaling", "ecr.api", "ecr.dkr", "elasticloadbalancing", "sns", "sqs", "secretsmanager", "lambda", "sts"
 variable "add_interface" {
   type        = list(string)
   description = "Adding new Interface endpoints"
   default     = []
 }
 
+# "dynamodb"
 variable "add_gateway" {
   type        = list(string)
   description = "Adding new Gateway endpoints"
