@@ -36,23 +36,11 @@ module "vpc_endpoint" {
 |------|--------|---------|
 | <a name="module_add_gateway"></a> [add\_gateway](#module\_add\_gateway) | ./modules/vpc-endpoint/gateway | n/a |
 | <a name="module_add_interface"></a> [add\_interface](#module\_add\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_autoscaling_interface"></a> [autoscaling\_interface](#module\_autoscaling\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_cloudwatch_logs_interface"></a> [cloudwatch\_logs\_interface](#module\_cloudwatch\_logs\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_cloudwatch_monitoring_interface"></a> [cloudwatch\_monitoring\_interface](#module\_cloudwatch\_monitoring\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_dynamodb_gateway"></a> [dynamodb\_gateway](#module\_dynamodb\_gateway) | ./modules/vpc-endpoint/gateway | n/a |
 | <a name="module_ec2_interface"></a> [ec2\_interface](#module\_ec2\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_ec2_messages_interface"></a> [ec2\_messages\_interface](#module\_ec2\_messages\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_ecr_api_interface"></a> [ecr\_api\_interface](#module\_ecr\_api\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_ecr_dkr_interface"></a> [ecr\_dkr\_interface](#module\_ecr\_dkr\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_elb_interface"></a> [elb\_interface](#module\_elb\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_lambda_interface"></a> [lambda\_interface](#module\_lambda\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_s3_gateway"></a> [s3\_gateway](#module\_s3\_gateway) | ./modules/vpc-endpoint/gateway | n/a |
-| <a name="module_secrets_manager_interface"></a> [secrets\_manager\_interface](#module\_secrets\_manager\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_sns_interface"></a> [sns\_interface](#module\_sns\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_sqs_interface"></a> [sqs\_interface](#module\_sqs\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_ssm_interface"></a> [ssm\_interface](#module\_ssm\_interface) | ./modules/vpc-endpoint/interface | n/a |
 | <a name="module_ssm_messages_interface"></a> [ssm\_messages\_interface](#module\_ssm\_messages\_interface) | ./modules/vpc-endpoint/interface | n/a |
-| <a name="module_sts_interface"></a> [sts\_interface](#module\_sts\_interface) | ./modules/vpc-endpoint/interface | n/a |
 
 ## Resources
 
