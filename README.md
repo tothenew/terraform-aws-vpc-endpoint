@@ -69,40 +69,16 @@ module "vpc_endpoint" {
 
 | Name | Description |
 |------|-------------|
-| <a name="output_autoscaling_interface_arn"></a> [autoscaling\_interface\_arn](#output\_autoscaling\_interface\_arn) | n/a |
-| <a name="output_autoscaling_interface_id"></a> [autoscaling\_interface\_id](#output\_autoscaling\_interface\_id) | n/a |
-| <a name="output_cloudwatch_logs_interface_arn"></a> [cloudwatch\_logs\_interface\_arn](#output\_cloudwatch\_logs\_interface\_arn) | n/a |
-| <a name="output_cloudwatch_logs_interface_id"></a> [cloudwatch\_logs\_interface\_id](#output\_cloudwatch\_logs\_interface\_id) | n/a |
-| <a name="output_cloudwatch_monitoring_interface_arn"></a> [cloudwatch\_monitoring\_interface\_arn](#output\_cloudwatch\_monitoring\_interface\_arn) | n/a |
-| <a name="output_cloudwatch_monitoring_interface_id"></a> [cloudwatch\_monitoring\_interface\_id](#output\_cloudwatch\_monitoring\_interface\_id) | n/a |
-| <a name="output_dynamodb_gateway_arn"></a> [dynamodb\_gateway\_arn](#output\_dynamodb\_gateway\_arn) | n/a |
-| <a name="output_dynamodb_gateway_id"></a> [dynamodb\_gateway\_id](#output\_dynamodb\_gateway\_id) | n/a |
 | <a name="output_ec2_interface_arn"></a> [ec2\_interface\_arn](#output\_ec2\_interface\_arn) | n/a |
 | <a name="output_ec2_interface_id"></a> [ec2\_interface\_id](#output\_ec2\_interface\_id) | n/a |
 | <a name="output_ec2_messages_interface_arn"></a> [ec2\_messages\_interface\_arn](#output\_ec2\_messages\_interface\_arn) | n/a |
 | <a name="output_ec2_messages_interface_id"></a> [ec2\_messages\_interface\_id](#output\_ec2\_messages\_interface\_id) | n/a |
-| <a name="output_ecr_api_interface_arn"></a> [ecr\_api\_interface\_arn](#output\_ecr\_api\_interface\_arn) | n/a |
-| <a name="output_ecr_api_interface_id"></a> [ecr\_api\_interface\_id](#output\_ecr\_api\_interface\_id) | n/a |
-| <a name="output_ecr_dkr_interface_arn"></a> [ecr\_dkr\_interface\_arn](#output\_ecr\_dkr\_interface\_arn) | n/a |
-| <a name="output_ecr_dkr_interface_id"></a> [ecr\_dkr\_interface\_id](#output\_ecr\_dkr\_interface\_id) | n/a |
-| <a name="output_elb_interface_arn"></a> [elb\_interface\_arn](#output\_elb\_interface\_arn) | n/a |
-| <a name="output_elb_interface_id"></a> [elb\_interface\_id](#output\_elb\_interface\_id) | n/a |
-| <a name="output_lambda_interface_arn"></a> [lambda\_interface\_arn](#output\_lambda\_interface\_arn) | n/a |
-| <a name="output_lambda_interface_id"></a> [lambda\_interface\_id](#output\_lambda\_interface\_id) | n/a |
 | <a name="output_s3_gateway_arn"></a> [s3\_gateway\_arn](#output\_s3\_gateway\_arn) | n/a |
 | <a name="output_s3_gateway_id"></a> [s3\_gateway\_id](#output\_s3\_gateway\_id) | n/a |
-| <a name="output_secrets_manager_interface_arn"></a> [secrets\_manager\_interface\_arn](#output\_secrets\_manager\_interface\_arn) | n/a |
-| <a name="output_secrets_manager_interface_id"></a> [secrets\_manager\_interface\_id](#output\_secrets\_manager\_interface\_id) | n/a |
-| <a name="output_sns_interface_arn"></a> [sns\_interface\_arn](#output\_sns\_interface\_arn) | n/a |
-| <a name="output_sns_interface_id"></a> [sns\_interface\_id](#output\_sns\_interface\_id) | n/a |
-| <a name="output_sqs_interface_arn"></a> [sqs\_interface\_arn](#output\_sqs\_interface\_arn) | n/a |
-| <a name="output_sqs_interface_id"></a> [sqs\_interface\_id](#output\_sqs\_interface\_id) | n/a |
 | <a name="output_ssm_interface_arn"></a> [ssm\_interface\_arn](#output\_ssm\_interface\_arn) | n/a |
 | <a name="output_ssm_interface_id"></a> [ssm\_interface\_id](#output\_ssm\_interface\_id) | n/a |
 | <a name="output_ssm_messages_interface_arn"></a> [ssm\_messages\_interface\_arn](#output\_ssm\_messages\_interface\_arn) | n/a |
 | <a name="output_ssm_messages_interface_id"></a> [ssm\_messages\_interface\_id](#output\_ssm\_messages\_interface\_id) | n/a |
-| <a name="output_sts_interface_arn"></a> [sts\_interface\_arn](#output\_sts\_interface\_arn) | n/a |
-| <a name="output_sts_interface_id"></a> [sts\_interface\_id](#output\_sts\_interface\_id) | n/a |
 <!-- END_TF_DOCS -->
 
 ## Authors
