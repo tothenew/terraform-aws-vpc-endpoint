@@ -1,0 +1,14 @@
+common:
+  vpn_cidr: "10.1.0.0/16"
+
+workspaces:
+  nonprod-us-west-1-default:
+    aws:
+      account_id: 123456789
+      region: us-west-1
+    account_name: nonprod
+    project_name: test
+    project_name_prefix: test
+    vpc_id: "vpc-0ab031c103e640687"
+    subnet_ids: ["subnet-0f4b37f8e13e4d411"]
+    route_table_ids: ["rtb-01509cb0ed604845f"]
